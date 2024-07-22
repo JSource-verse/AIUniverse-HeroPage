@@ -1,0 +1,254 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@300;400;600;700&display=swap');
+*, *::after, *::before {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Nunito', sans-serif;
+    color: white;
+    overflow: hidden;
+    background-color: black;
+}
+
+.bg-img {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: url(/images/go.jpg) no-repeat fixed center;
+    background-size: cover;
+    animation: scaling 30s linear infinite;
+}
+
+@keyframes scaling {
+    0% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(2);
+    }
+    100% {
+        transform: scale(1);
+    }
+}
+
+.bg-img::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.3);
+}
+
+a {
+    text-decoration: none;
+    color: white;
+}
+
+ol {
+    list-style-type: none;
+    display: flex;
+}
+
+.container {
+    position: relative;
+    max-width: 1900px;
+    margin: 0 auto;
+    height: 100vh;
+}
+
+.mars {
+    position: absolute;
+    animation: movement 30s linear infinite;
+    
+}
+
+@keyframes movement {
+    0% {
+        width: 10rem;
+        top: 0%;
+        right: 30%;
+        transform: rotate(0deg);
+    }
+    50% {
+        width: 50rem;
+        top: 20%;
+        right: 5%;
+        transform: rotate(180deg);
+    }
+    100% {
+        width: 20rem;
+        top: 10%;
+        right: 30%;
+        transform: rotate(360deg);
+    }
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 50px 0;
+}
+
+header>a {
+    font-weight: 700;
+    font-size: 24px;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+}
+
+header ol li {
+    font-weight: 600;
+    padding: 0 20px;
+    opacity: 0.6;
+}
+
+header ol li:first-child {
+    opacity: 1;
+}
+
+h1 {
+    font-size: 54px;
+}
+
+main {
+    padding-top: 5%;
+}
+
+main>p {
+    max-width: 50%;
+    opacity: 0.75;
+    font-size: 13px;
+}
+
+/* Container for the buttons */
+.auth-buttons-container {
+    position: fixed; /* Fixed position to stay on the screen while scrolling */
+    top: 50%; /* Center vertically */
+    left: 200px; /* Position from the left */
+    transform: translateY(-200%); /* Adjust vertical centering */
+    z-index: 1000; /* Ensure it's on top of other elements */
+    display: flex; /* Flexbox for alignment */
+    align-items: center; /* Center items vertically in the container */
+    gap: -30px; /* Space between buttons */
+  }
+  
+ /* Style for the buttons */
+.auth-button {
+    padding: 15px 80px;
+    border: 2px solid rgba(255, 255, 255, 0.5);
+    border-radius: 20px;
+    color: rgba(255, 255, 255, 0.8);
+    background-color: rgba(0, 0, 0, 0.3); /* Semi-transparent background */
+    text-align: center;
+    text-decoration: none;
+    font-size: 16px;
+    font-weight: bold;
+    transition: all 0.3s;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.5); /* Slight shadow for better visibility */
+  }
+  
+  /* Hover effect for buttons */
+  .auth-button:hover {
+    background-color: rgba(0, 0, 0, 0.5); /* Darker on hover */
+    border-color: rgba(255, 255, 255, 0.8);
+    color: #ffffff;
+  }
+  
+  /* Specific style for "Sign In" button */
+  .auth-button.sign-in {
+    background-color: rgba(0, 0, 0, 0.2);
+  }
+  
+  /* Specific style for "Sign Up" button */
+  .auth-button.sign-up {
+    background-color: rgba(0, 0, 0, 0.4);
+  }
+  
+  /* Responsive adjustments */
+  @media (max-width: 1024px) {
+    .auth-button {
+      padding: 12px 60px;
+      font-size: 14px;
+    }
+  }
+  
+  @media (max-width: 768px) {
+    .auth-button {
+      padding: 10px 40px;
+      font-size: 12px;
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .auth-button {
+      padding: 8px 20px;
+      font-size: 10px;
+    }
+  }
+  
+  
+.d-flex {
+    display: flex;
+    margin-top: 20px;
+    margin-bottom: 50px;
+}
+
+.d-flex a {
+    margin-right: 50px;
+    display: flex;
+    font-size: 14px;
+    align-items: center;
+    text-transform: uppercase;
+}
+
+.d-flex a span {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 12px;
+    margin-right: 5px;
+}
+
+.d-flex a:first-child span {
+    background: maroon;
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+}
+
+.d-flex a:last-child span {
+    height: 20px;
+    width: 20px;
+    font-size: 7px;
+    border: 2px solid white;
+    border-radius: 50%;
+}
+
+ol.info {
+    padding-top: 5%;
+}
+
+ol.info li {
+    flex: 0 0 30%;
+}
+
+ol.info li h5 {
+    margin-bottom: 10px;
+}
+
+ol.info li h4 {
+    margin-bottom: 10px;
+}
+
+ol.info li p {
+    padding-right: 20%;
+    opacity: 0.75;
+}
+
